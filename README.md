@@ -16,13 +16,13 @@ This project implements a collaborative text editing solution where:
 
 ```
 ┌─────────────────┐    WebSocket         ┌─────────────────┐
-│   Rust Editor      │◄────────────────►│  VS Code Plugin    │
-│   (Master)         │    localhost:3030    │   (Client)         │
-│                    │                      │                    │
-│ • File I/O         │                      │ • Text Changes     │
-│ • WebSocket        │                      │ • Change Events    │
-│   Server           │                      │                    │
-│ • Terminal UI      │                      │                    │
+│   Rust Editor   │◄────────────────────►│  VS Code Plugin │
+│   (Master)      │    localhost:3030    │   (Client)      │
+│                 │                      │                 │
+│ • File I/O      │                      │ • Text Changes  │
+│ • WebSocket     │                      │ • Change Events │
+│   Server        │                      │                 │
+│ • Terminal UI   │                      │                 │
 └─────────────────┘                      └─────────────────┘
 ```
 
