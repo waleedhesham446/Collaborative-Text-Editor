@@ -1,0 +1,35 @@
+[package]
+name = "text_editor"
+version = "0.1.0"
+edition = "2021"
+authors = ["Waleed Hesham <waleedhesham2001@gmail.com>"]
+description = "A simple interactive CLI text editor written in Rust"
+license = "MIT"
+repository = "https://github.com/yourusername/text_editor"
+keywords = ["cli", "editor", "text", "terminal"]
+categories = ["command-line-utilities", "text-editors"]
+
+[dependencies]
+futures = "0.3.31"
+futures-util = "0.3"
+url = "2.5"
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = "0.21"
+tungstenite = "0.21"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+parking_lot = "0.12"
+warp = "0.3"
+log = "0.4"
+simplelog = "0.12"
+
+[profile.release]
+# Optimize for size and performance
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[[bin]]
+name = "text_editor"
+path = "src/main.rs"
